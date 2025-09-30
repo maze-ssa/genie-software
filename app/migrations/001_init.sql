@@ -1,0 +1,7 @@
+CREATE SCHEMA IF NOT EXISTS app;
+CREATE TABLE IF NOT EXISTS app.todos (
+id SERIAL PRIMARY KEY,
+title TEXT NOT NULL,
+done BOOLEAN NOT NULL DEFAULT false,
+created_at timestamptz NOT NULL DEFAULT now()
+);
